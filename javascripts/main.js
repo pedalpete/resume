@@ -23,7 +23,6 @@ Resume.Routers.Start = Backbone.Router.extend({
 		"recommendations": "recommendations",
 		"contact":"contact",
 		"intro":"intro",
-		"education":"education",
 		"": "resume"
 	},
 
@@ -50,19 +49,18 @@ Resume.Routers.Start = Backbone.Router.extend({
 	contact: function(){
 		new Resume.Views.Contact();
 		new Resume.Views.InTheNews();
+		new Resume.Views.RelevantSkills();
 		this.location_hash();
 	},
 
 	intro: function(){
 		new Resume.Views.Intro();
+		new Resume.Views.RelevantSkills();
 		new Resume.Views.InTheNews();
 		this.location_hash();
 	},
 
-	education: function(){
-		new Resume.Views.Education();
-		this.location_hash();
-	},
+
 	location_hash: function(){
             $('.active').removeClass('active');
             if(location.hash==''){
@@ -83,7 +81,10 @@ Resume.Collections.Jobs = Backbone.Collection.extend({
 
 });
 
-Resume.jobs = new Resume.Collections.Jobs([{"title":"Data Management Architect &amp; Developer", "company":"Bravo Busines Media", "dates":"6 Months - May 2011 to Oct 2011","description":"Gathered business requirements, and envisioned a solution to painstaking highly labour intensive data management system for online retailer. Delivered a web-based solution resulting in 75% reduction in processing time and considerable accuracy improvement. Very well received by employees and management."},
+Resume.jobs = new Resume.Collections.Jobs([{"title":"Founder & Developer", "company":"Kitchon", "dates":"2 Years, 8 months, Sept 2010 to Current","description":"Research into new tools to aid in cooking, development of multiple prototypes and continuing to test with users. Developed an algorithm to manage recipe ingredients, and understand the intricacies of cooking."},
+										{"title":"Senior Software Engineer", "company":"IndustrieIT", "dates":"6 Months, Jan 2013 to June 2013","description":"Continued development of features and ongoing maintenance for a national Australian brand's Ruby-on-Rails/MongoDB website and API as well as an HTML5/Phonegap app which is available in both the Apple and Google Play app stores."},
+											{"title":"Entrepreneur(Imprendador)", "company":"Start-up Chile", "dates":"8 Months, Nov 2011 to June 2012","description":"Moved to Chile to bring entrepreneurial and technology culture to Chilean communities. Started the Santiago chapter of OpenCoffee. Worked with Chilean design graduates giving them experience working on web projects. Started the Start-up Chile technology 'tribe', a group of talks presented by other Start-up Chile technologists to foster learning across more than 100 start-up companies."},
+											{"title":"Data Management Architect &amp; Developer", "company":"Bravo Busines Media", "dates":"6 Months - May 2011 to Oct 2011","description":"Gathered business requirements, and envisioned a solution to painstaking highly labour intensive data management system for online retailer. Delivered a web-based solution resulting in 75% reduction in processing time and considerable accuracy improvement. Very well received by employees and management."},
 											{"title": "Founder & Developer", "company": "HearWhere & ZiFiMusic", "dates" : "3 Years, 7 Months - June 2007 to Dec 2010", "description": "Taught myself to code resulting in development of the world's largest concert database and search engine with more than 8 million concerts. Developed artists popularity alghorithm for recommending best touring artists by region. Developed high-availability API serving and licensed capabilities to Maxim magazines Blender.com, was considered by Playlist.com, Kazaa.com, MetroLyrics and more. Read what <a style='font-size:10pt;' target='new' href='http://techcrunch.com/hearwhere'>TechCrunch had to say</a>."},
 											{"title":"Mobile Strategy Consultant, Product Manager", "company": "MusicIp", "dates":"7 Months - Oct 2005 to May 2006", "description":"Developed technology strategy and recommendations for placing acoustic matching technology on phones. Product Managed web-properties for licensee self-service, support, as well as critically acclaimed 'playground' music discovery web-app."},
 											{"title": "Product Manager / Project Manager / Knowledge Architect", "company": "Intrawest", "dates": "1 Year, 9 Months - Oct 2001 to June 2003", "description":"Developed vision and managed development of cutting-edge company wide knowledge management system for company of 24,000. Vision and management of successful proof-of-concept development for company-wide HR review system."}]);
@@ -152,7 +153,7 @@ Resume.Views.RelevantSkills = Backbone.View.extend({
 		this.render();
 	},
 	render: function(){
-		$('hr',this.el).after('<li class="nav-header"><h3>Relevant Skills<br/>&amp; Characteristics</h3></li><li>Product Management</li><li>Business Planning</li><li>Vision & Strategy</li><li>Usability & Design</li><li>People Person</li><li>Follow Through</li><li>Developer</li>');
+		$('hr',this.el).after('<li class="nav-header"><h3>Relevant Skills</h3></li><li>Javascript</li><li>Ruby-on-Rails</li><li>PHP</li><li>MySQL</li><li>MongoDB</li><li>jQuery</li><li>Backbone.js</li><li>Knockout</li><li>Angular.js</li><li>CSS/SASS</li><li class="nav-header"><h3>Characteristics</h3></li></li><li>Product Management</li><li>Business Planning</li><li>Vision & Strategy</li><li>Usability & Design</li><li>People Person</li><li>Follow Through</li><li>Developer</li>');
 	}    
 	
 });
@@ -186,7 +187,7 @@ Resume.Views.Intro = Backbone.View.extend({
 		this.render();
 	},
 	render: function(){
-		$(this.el).html('<p>An Innovator and Engineer with a dash of Artist, able to envision the future and use technology to make that future a reality. <p><p>With a diverse background in everything from Marketing to Engineering, including founding two companies and developing industry leading technologies, the opportunity to take on the scale of challenges which Google engages is a huge motivator.  Working with and leading a team focused on creating the future is exactly the kind of environment I’ll thrive in.</p><p>What you don’t see in my resume is that I’m always finding opportunities and taking the initiative, I’m a natural innovator. During my seven years at Intrawest,  I had a reputation throughout the company for creating new products and streamlining internal systems. From retail to Public Relations, I was active in almost all facets of this large international organization.</p><p> At 21 years old, I redesigned the sales process for a multi-million dollar ski show sales promotion. What had previously been a multi-hour wait for customers came down to less than 20 minutes, and within 45 minutes customers could come back and pick-up their purchases, where previously they would have to be mailed out. This not only exceeded the customer’s expectations, but also saved the company a bunch of time and money<p>While part of Start-up Chile, I founded the Santiago chapter of OpenCoffee with the help of the creators of OpenCoffee Bangalore, as well as helping local Chileans identify opportunities and refine their market and pitches. </p><p><a href=”#contact”>Contact me</a> to discuss the opportunity to join the Google Team.</p>Pete Field');
+		$(this.el).html('<p>An Innovator and Engineer with a dash of Artist, able to envision the future and use technology to make that future a reality.</p><p>Having spent the last few months working with Sydney based consulting company on the website and mobile app for a national brand, I’m looking for my next challenge.  With a diverse background in everything from Marketing to Engineering, including founding two companies and developing industry leading technologies,I’ve got the diversity and passion to take on interesting projects and be an engaged member of a team. <h3>Industry Leading Technology</h3><p>After recognizing a market opportunity, teaching myself to program and launching my first company (a Pandora like customised radio service), I built the world’s largest concert database, <a href="http://techcrunch.com/hearwhere" target="new">HearWhere</a>. Quickly recognized by the media as a unique and inventive service, the first concert listing site which let visitors sample artists music, as well as having an advanced artist popularity algorithm. I built an API around the data base and provided concert listings to Maxim Magazines music arm Blender.com among others. <p><h3>Creating Modern Interfaces for Forever</h3><p>Only a few weeks ago, I realized that I have never built a conventional website, I’ve always developed back-end APIs to serve javascript heavy front-end single page sites. Originally working with plain-old Javascript and then moving to jQuery, in the past few years I moved to managing front-end work with a selection of modern frameworks including Backbone, Knockout, JQUI (now Intel App Framework), jQueryMobile, and Angular.js. I’ve worked on mobile HTML5 Applications wrapped in PhoneGap/Cordova which are in both the Google Play and Apple app stores. </p><h3>Data & Design</h3><p>In my previous experience, I’ve worked with large datasets and understand the importance of design both from a UI/UX perspective as well as data/information design. In developing a data-management system for Bravo Media, the task was to take a horrendously painful data-entry task and make it simple. With HearWhere, the data-design task was in the presentation of thousands of concerts to music fans in a way that helped them discover the artists they should go see or want to see.  </p><h3>Innovator</h3><p>I’ve worked with start-up companies in the past, as well as managing start-up projects within larger companies and building my own projects and businesses.  As my letters of reference will attest, finding creative solutions and understanding both business and user implications are where I really sink my teeth into a project. </p><p>If you are interested in learning more, or have an opportunity you think I may be a good fit for, please contact me. </p>');
 	}
 });
 
@@ -238,25 +239,3 @@ Resume.inthenews = new Resume.Collections.InTheNews([{"source":"TechCrunch","typ
 													{"source":"TechRadar","type":"text","link":"http://www.techradar.com/news/internet/web/20-websites-you-never-realised-you-needed-478989","title":"20 websites you never realised you needed (#4)"}]);
 
 
-Resume.Models.Education = Backbone.Model.extend();
-Resume.Collections.Schools = Backbone.Collection.extend({
-	model: Resume.Models.Education
-});
-Resume.Views.Education = Backbone.View.extend({
-	el:'div#main',
-
-	initialize: function(){
-		$(this.el).empty();
-	  Resume.education.each(this.add);
-	  	
-		
-	},
-	
-	add: function(education){
-		var template = _.template( $("#jobs_template").html(), education.attributes);
- 		$('div#main').append(template);
-	}
-});
-
-Resume.education = new Resume.Collections.Schools([{"title":"2 Years towards BA Computer Science / Psychology", "company":"Carlton University - Ottawa, Ontario, Canada", "dates":"2 Years - Sept 1992 to June 1994","description":"University isn't for everybody, like the founders of Google, and most other REALLY successful people in technology, so why not me! In all seriousness, I have continued to education myself since leaving school."},
-													{"title":"15+ Years of Learning &amp; Doing ","company":"Intrawest, Whistler/Blackbonb, iPix, MusicIp...","dates":"15+ Years - Sept 1995 to Today","description":"My education has been continuous since leaving university. I've been exceptionally fortunate to have been approached with opportunities to work in many fields of business. Additionally, I am a very curious person, participating in all kinds of research and study in a diverse area of interests. Though, my formal education may be limited, I hope you'll agree that my work experience and character have prepared me well for the position of Product Manager with Google."}]);

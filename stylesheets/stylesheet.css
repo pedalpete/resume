@@ -23,19 +23,9 @@
   height: 100%;
 }
 
-#logo {
-  margin-top: 5px;
-  background: url('https://ssl.gstatic.com/gb/images/j_e6a6aca6.png') no-repeat -242px,0;
-  width: 100px;
-  height: 62px;
 
-}
 
-input#searchbox {
-  display: inline-block;
-  margin-top: 15px;
 
-}
 
 #secondary_nav {
   border-bottom: 1px solid #DEDEDE;
@@ -74,11 +64,14 @@ div.result {
   padding-top: 20px;
   font-size: 10pt;
 }
-div.result a {
-  text-decoration: underline;
-  font-size: 18pt;
-  color: #12c;
-  cursor: pointer;
+div.result:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+div.result h3, div#main > h3 {
+line-height: 20px;
+color: #DD4B39;
+font-weight: 300;
 }
 
 div.result div.company {
@@ -128,7 +121,7 @@ div.recommend, div.news {
   font-size: 9pt;
   margin-bottom: 15px;
   padding: 6px;
-  background-color: #FFF8E7;
+  background-color: #EDEDED;
 }
 
 div.recommend div.from, div.news div.source {
