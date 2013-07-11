@@ -1,0 +1,143 @@
+.navbar-inner {
+  -webkit-border-radius: 0px;
+  height: 30px;
+}
+
+
+
+.topbar {
+  max-height: 30px;
+  background-color: #2D2D2D;
+  border-color: #2D2D2D;
+  padding: 0px;
+}
+
+.topbar ul {
+  margin-left: -40px;
+}
+.searchbar {
+  padding: 5px 5px 0px;
+  margin-left: -20px;
+  background-color: #EEE;
+  border-bottom: 1px solid #DDD;
+  height: 100%;
+}
+
+#logo {
+  margin-top: 5px;
+  background: url('https://ssl.gstatic.com/gb/images/j_e6a6aca6.png') no-repeat -242px,0;
+  width: 100px;
+  height: 62px;
+
+}
+
+input#searchbox {
+  display: inline-block;
+  margin-top: 15px;
+
+}
+
+#secondary_nav {
+  border-bottom: 1px solid #DEDEDE;
+padding: 10px 180px 10px;
+}
+
+#secondary_nav a {
+  color: #777;
+  font-weight: 500;
+}
+#secondary_nav div.active{
+  color: #DD4B39;
+  border-bottom: 3px solid #DD4B39;
+  height: 36px;
+  margin-bottom: -10px;
+}
+
+#secondary_nav div.active a {
+  font-weight: 600;
+    color: #DD4B39;
+}
+
+.nav-list h3 {
+  font-size: 14px;
+  color: #DD4B39;
+  line-height: 18px;
+  font-weight: 300;
+  margin-top: -3px;
+}
+
+div#main {
+  margin-top: 10px;
+}
+
+div.result {
+  padding-top: 20px;
+  font-size: 10pt;
+}
+div.result a {
+  text-decoration: underline;
+  font-size: 18pt;
+  color: #12c;
+  cursor: pointer;
+}
+
+div.result div.company {
+  color: #093;
+  font-size: 9pt;
+}
+
+div.result div.dates {
+ color: #777;
+}
+
+div.result p {
+  font-size: 11pt;
+  line-height: 16px;
+}
+
+div.result li {
+  display: inline;
+  list-style-type: disc;
+}
+
+
+ul.nav-list li {
+  margin-bottom: 5px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+
+ul.nav-list li.shown  {
+  background-color: #EEE;
+}
+
+ul.nav-list li.shown a {
+   color: #777;
+}
+
+div#contact {
+  font-size: 16pt;
+  line-height: 40px;
+}
+div#email span{
+  font-size: 0px;
+}
+
+div.recommend, div.news {
+  font-size: 9pt;
+  margin-bottom: 15px;
+  padding: 6px;
+  background-color: #FFF8E7;
+}
+
+div.recommend div.from, div.news div.source {
+  margin-top: 10px;
+}
+
+
+div#main p:first-child, div#snippits p:first-child{
+  color: #DD4B39;
+  font-weight: 600;
+  }
+

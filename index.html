@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pedalpete : resume and about me" />
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-with-responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+
+
+    <title>Pedro For Google Product Manager!</title>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner topbar">
+        <div class="container">
+    
+            <ul class="nav">
+              <li class="active"><a href="https://plus.google.com/u/0/109139563101104287966/posts" target="new">+Pete</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#intro">Intro</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#recommendations">Recommendations</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+         
+        </div>
+      </div>
+      <div class="navbar-inner searchbar">
+      
+          <div id="logo" class="span3"></div>
+          <div class="span9">
+             <input type="text" class="span6" id="searchbox" value="Vote for Pedro (for Google Product Manager)" /> <a class="btn btn-primary" id="hire">Hire Me!</a>
+          </div>
+       
+      </div>
+      <div class="container" id="secondary_nav">
+    
+           
+              <div class="span active"><a href="#resume">Resume</a></div>
+              <div class="span"><a href="#intro">Intro</a></div>
+              <div class="span"><a href="#education">Education</a></div>
+               <div class="span"><a href="#recommendations">Recommendations</a></div>
+               <div class="span"><a href="#contact">Contact</a></div>
+         
+        </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2" style="margin-left: -15px;">
+          <div class="sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header"><h3>Product Manager</h3></li>
+              <li>Sydney, Australia</li>
+              <hr>
+             
+
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span5">
+            <div style="color:#777;margin-bottom: 36px;">About 1,230,720,660 seconds (39 years)</div>
+           
+           <div id="main"></div>
+        
+        </div><!--/span-->
+         <div class="span3 offset1" id="snippits">
+        </div>
+      </div><!--/row-->
+
+      <hr>
+
+
+    </div>
+
+    <div id="searchModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">You can stop your search!</h3>
+  </div>
+  <div class="modal-body">
+    <p>Cogratulations! Your search has ended. </p><p><a href="#contact" id="modal_contact">Contact me</a> and we'll get this ball rolling</a></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script  src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+  <script  src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script>
+  <script src="javascripts/bootstrap-modal.js"></script>
+  <script src="javascripts/main.js"></script>
+  
+    <script>
+    $(document).ready(function(){
+      Resume.init();
+
+      $('input#searchbox, a#hire').focus(function(){
+        $('div#searchModal').modal('show');
+       
+
+          $(this).blur();
+      });
+      $('a#modal_contact').click(function(){
+          $('div#searchModal').modal('hide');
+        });
+    });
+    </script>
+
+    <script type="text/template" id="jobs_template">
+       <div class="result">
+              <a><%= title %></a>
+              <div class="company"><%= company %></div>
+              <div class="dates"><%= dates %></div>
+              <p><%= description %></p>
+          
+    </script>
+    <script type="text/template" id="recommendation_quotes">
+      <div class="recommend">
+        <%= quote %>
+      <div class="from"><%= from %></div>
+      <div>
+    </script>
+
+    <script type="text/template" id="in_the_news">
+      <div class="news">
+        <a href="<%= link %>" target="new"><%= title %></a>
+        <div class="source"><%= source %></div>
+      </div>
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4440218-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
