@@ -15,16 +15,6 @@
 .topbar ul {
   margin-left: -40px;
 }
-.searchbar {
-  padding: 5px 5px 0px;
-  margin-left: -20px;
-  background-color: #EEE;
-  border-bottom: 1px solid #DDD;
-  height: 100%;
-}
-
-
-
 
 
 #secondary_nav {
@@ -33,19 +23,19 @@ padding: 10px 180px 10px;
 }
 
 #secondary_nav a {
-  color: #777;
-  font-weight: 500;
+  color: #DD4B39;
+  padding: 0px 10px;
 }
 #secondary_nav div.active{
-  color: #DD4B39;
-  border-bottom: 3px solid #DD4B39;
+  color: #fff;
+  background-color: #DD4B39;
   height: 36px;
   margin-bottom: -10px;
 }
 
 #secondary_nav div.active a {
   font-weight: 600;
-    color: #DD4B39;
+    color: #fff;
 }
 
 .nav-list h3 {

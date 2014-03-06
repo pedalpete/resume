@@ -61,19 +61,6 @@
 
     </div>
 
-    <div id="searchModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">You can stop your search!</h3>
-  </div>
-  <div class="modal-body">
-    <p>Cogratulations! Your search has ended. </p><p><a href="#contact" id="modal_contact">Contact me</a> and we'll get this ball rolling</a></p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-  </div>
-</div>
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script  src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
   <script  src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script>
@@ -83,24 +70,18 @@
     <script>
     $(document).ready(function(){
       Resume.init();
-
-      $('input#searchbox, a#hire').focus(function(){
-        $('div#searchModal').modal('show');
-       
-
-          $(this).blur();
-      });
-      $('a#modal_contact').click(function(){
-          $('div#searchModal').modal('hide');
-        });
     });
     </script>
 
+    <script type="template" id="intro">
+    <p>An Innovator and Engineer with a dash of Artist, able to envision the future and use technology to make that future a reality.</p><p>Having spent the last few months working with Sydney based consulting company on the website and mobile app for a national brand, I’m looking for my next challenge.  With a diverse background in everything from Marketing to Engineering, including founding two companies and developing industry leading technologies,I’ve got the diversity and passion to take on interesting projects and be an engaged member of a team. <h3>Industry Leading Technology</h3><p>After recognizing a market opportunity, teaching myself to program and launching my first company (a Pandora like customised radio service), I built the world’s largest concert database, <a href="http://techcrunch.com/hearwhere" target="new">HearWhere</a>. Quickly recognized by the media as a unique and inventive service, the first concert listing site which let visitors sample artists music, as well as having an advanced artist popularity algorithm. I built an API around the data base and provided concert listings to Maxim Magazines music arm Blender.com among others. <p><h3>Creating Modern Interfaces for Forever</h3><p>Only a few weeks ago, I realized that I have never built a conventional website, I’ve always developed back-end APIs to serve javascript heavy front-end single page sites. Originally working with plain-old Javascript and then moving to jQuery, in the past few years I moved to managing front-end work with a selection of modern frameworks including Backbone, Knockout, JQUI (now Intel App Framework), jQueryMobile, and Angular.js. I’ve worked on mobile HTML5 Applications wrapped in PhoneGap/Cordova which are in both the Google Play and Apple app stores. </p><h3>Data & Design</h3><p>In my previous experience, I’ve worked with large datasets and understand the importance of design both from a UI/UX perspective as well as data/information design. In developing a data-management system for Bravo Media, the task was to take a horrendously painful data-entry task and make it simple. With HearWhere, the data-design task was in the presentation of thousands of concerts to music fans in a way that helped them discover the artists they should go see or want to see.  </p><h3>Innovator</h3><p>I’ve worked with start-up companies in the past, as well as managing start-up projects within larger companies and building my own projects and businesses.  As my letters of reference will attest, finding creative solutions and understanding both business and user implications are where I really sink my teeth into a project. </p><p>If you are interested in learning more, or have an opportunity you think I may be a good fit for, please contact me. </p>
+</script>
     <script type="text/template" id="jobs_template">
        <div class="result">
               <h3><%= title %></h3>
               <div class="company"><%= company %></div>
               <div class="dates"><%= dates %></div>
+              <div class="technologies">Technologies: <%= technologies %></div>
               <p><%= description %></p>
           
     </script>
